@@ -1,0 +1,30 @@
+[
+  {
+    "name": "account_number",
+    "pattern": "\\d{8,15}"
+  },
+  {
+    "name": "amount",
+    "pattern": "\\d{1,3}(.|,| )?(\\d{3})?(.|,| )?(\\d{3})?"
+  },
+  {
+    "name": "card_number",
+    "pattern": "9704\\s?-?\\s?\\d{4}\\s?-?\\s?\\d{4}\\s?-?\\s?\\d{4}"
+  },
+  {
+    "name": "message",
+    "pattern": "^\\([_A-z0-9]*((-|\\s)*[_A-z0-9])*\\)$"
+  },
+  {
+    "name": "phone_number",
+    "pattern": "(84|0[3|5|7|8|9])+([0-9]{8})\\b"
+  },
+  {
+    "name": "user",
+    "pattern": "(\\bJohn\\b|\\bMarry\\b)"
+  },
+  {
+    "name": "bank",
+    "pattern": "(\\btechcombank\\b|\\btcb\\b|\\bsacombank\\b|\\bscb\\b|\\bviettel\\b|\\bvt\\b)"
+  }
+]

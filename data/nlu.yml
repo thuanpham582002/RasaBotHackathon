@@ -1,0 +1,327 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: transfer_account
+  examples: |
+    - I have just transferred [20000](amount) to account number [1234567890](account_number) at [tcb](bank) for this month's [rent payment](message).
+    - I've sent [320000](amount) to account [1234567890](account_number) at [tcb](bank) to help cover the cost of our [weekend getaway - travel expenses](message).
+    - Please note that I've deposited [200000](amount) into account [1234567890](account_number) at [scb](bank) to cover our share of the [utility bills](message).
+    - I have made a payment of [240400](amount) to account [1234567890](account_number) at [sacombank](bank) for the annual maintenance of our [car maintenance](message).
+    - I've transferred [200000](amount) to account [1234567890](account_number)) at [sacombank](bank) to pay for our [monthly grocery shopping](message).
+    - I just sent [20000](amount) to account [1234567890](account_number) at [sacombank](bank) for [birthday gift](message).
+    - I've paid [200000](amount) to account [1234567890](account_number)) at [sacombank](bank) as a contribution to [medical expenses](message).
+    - I have deposited [200000](amount) into account [1234567890](account_number) at [sacombank](bank) to cover [gym membership](message).
+    - I transferred [200000](amount) to account [1234567890](account_number) at [sacombank](bank) as a payment for the online course we both registered for [online course](message).
+    - I've sent [200000](amount) to account [1234567890](account_number) at [sacombank](bank) for our [monthly internet service bill](message).
+    - I need to transfer [200 000](amount) to account [1234567890](account_number) for [medical expenses](message).
+    - Can you help me transfer [200 000](amount) to account [1234567890](account_number) to pay for [my child's tuition](message)?
+    - I want to transfer [200 000](amount) to account [1234567890](account_number) to [support a friend's business venture](message).
+    - Please help me transfer [200 000](amount) to account [1234567890](account_number) to pay for [a down payment on a new home](message).
+    - I need to transfer [200 000](amount) to account [1234567890](account_number) to [cover the cost of a family emergency](message).
+    - Could you assist me with transferring [200 000](amount) to account [1234567890](account_number) to [invest in a new startup](message)?
+    - I would like to transfer [200 000](amount) to account [1234567890](account_number) to [donate to a charity](message).
+    - Please help me transfer [200 000](amount) to account [1234567890](account_number) to [pay for a wedding](message).
+    - Can you assist me with transferring [200 000](amount) to account [1234567890](account_number) to [fund a research project](message)?
+    - I need to transfer [200 000](amount) to account [1234567890](account_number) to [pay for a legal settlement](message).
+    - Please transfer [200,000](amount) to account [1234567890](account_number).
+    - I'd like to send [200,000](amount) to account number [1234567890](account_number).
+    - Can you help me transfer [200,000](amount) to account [1234567890](account_number)?
+    - I want to move [200,000](amount) to account [1234567890](account_number).
+    - Kindly transfer [200,000](amount) to account [1234567890](account_number).
+    - Initiate a [100,000](amount) transfer to account [1234567890](account_number).
+    - Please process a [200,000](amount) transaction to account [1234567890](account_number).
+    - I'd appreciate it if you could transfer [200.000](amount) to account [1234567890](account_number).
+    - I want to make a [200.000](amount) transfer to account [1234567890](account_number).
+    - Can you arrange a [200.000](amount) transfer to account [1234567890](account_number)?
+    - I'd like to request a [200.000](amount) transfer to account [1234567890](account_number).
+    - Please send [200.000](amount) to account [1234567890](account_number).
+    - I'd like to initiate a [200.000](amount) transfer to account [1234567890](account_number).
+    - Transfer [200.000](amount) to account [1234567890](account_number), please.
+    - I want to request a [200.000](amount) transfer to account [1234567890](account_number).
+- intent: transfer_card
+  examples: |
+    - I have just transferred [200 000](amount) to card number [0000000000000000](card_number) at [scb](bank) for [mobile phone bills].
+    - I've sent [200 000](amount) to card number [0000000000000000](card_number) at [scb](bank) to [concert tickets].
+    - Please note that I've deposited [200 000](amount) into card number [0000000000000000](card_number) at [scb](bank) to pay for [house cleaning service].
+    - I have made a payment of [200 000](amount) to card number [0000000000000000](card_number) at [scb](bank) for the catering services for our upcoming event [catering services].
+    - I've transferred [200 000](amount) to card number [0000000000000000](card_number) at [viettel](bank) to contribute to the group gift for [group gift].
+    - I just sent [200 000](amount) to card number [0000000000000000](card_number) at [viettel](bank) for the landscaping services for our [language course enrollment.].
+    - I've paid [200 000](amount) to card number [0000000000000000](card_number) at [viettel](bank) as a donation to the local animal shelter [charitable donation].
+    - I have deposited [200 000](amount) into card number [0000000000000000](card_number) at [viettel](bank) to cover the cost of our recent [sports equipment].
+    - I transferred [200 000](amount) to card number [0000000000000000](card_number) at [viettel](bank) as a payment for the professional [photography session].
+    - Please transfer [200 000](amount) to card number [0000000000000000](card_number).
+    - I'd like to send [200 000](amount) to card number [0000000000000000](card_number).
+    - Can you help me transfer [200 000](amount) to card number [0000000000000000](card_number)?
+    - I want to move [200 000](amount) to card number [0000000000000000](card_number).
+    - Kindly transfer [200 000](amount) to card number [0000000000000000](card_number).
+    - Initiate a [200 000](amount) transfer to card number [0000000000000000](card_number).
+    - Please process a [200 000](amount) transaction to card number [0000000000000000](card_number).
+    - I'd appreciate it if you could transfer [200 000](amount) to card number [0000000000000000](card_number).
+    - I want to make a [200 000](amount) transfer to card number [0000000000000000](card_number).
+    - Can you arrange a [200 000](amount) transfer to card number [0000000000000000](card_number)?
+    - I'd like to request a [200 000](amount) transfer to card number [0000000000000000](card_number).
+    - Please send [200 000](amount) to card number [0000000000000000](card_number).
+    - I'd like to initiate a [200 000](amount) transfer to card number [0000000000000000](card_number).
+    - Transfer [200 000](amount) to card number [0000000000000000](card_number), please.
+    - I want to request a [200 000](amount) transfer to card number [0000000000000000](card_number).
+- intent: transfer_phone
+  examples: |
+    - Please transfer [200 000](amount) to number [8433333333](phone_number) at [vt](bank) with the message [(some thing some thing)](message)
+    - I'd like to send [200 000](amount) to [vt](bank) number [8433333333](phone_number) and include the message [(some thing some thing)](message)
+    - Can you help me transfer [200 000](amount) to number [8433333333](phone_number) at [vt](bank) with the message [(some thing some thing)](message)?
+    - I want to move [200 000](amount) to [vt](bank) number [8433333333](phone_number) and attach the message [(some thing some thing)](message)
+    - Kindly transfer [200 000](amount) to number [8433333333](phone_number) at [vt](bank) and include the message [(some thing some thing)](message)
+    - Initiate a [200 000](amount) transfer to [vt](bank) number [8433333333](phone_number) and add the message [(some thing some thing)](message)
+    - Please process a [200 000](amount) transaction to [tcb](bank) number [8433333333](phone_number) with the note [(some thing some thing)](message)
+    - I'd appreciate it if you could transfer [200,000](amount) to [tcb](bank) number [8433333333](phone_number) along with the message [(some thing some thing)](message)
+    - I want to make a [200,000](amount) transfer to [tcb](bank) number [8433333333](phone_number) and include the message [(some thing some thing)](message)
+    - Can you arrange a [200,000](amount) transfer to [tcb](bank) number [8433333333](phone_number) with the message [(some thing some thing)](message)?
+    - I'd like to request a [200,000](amount) transfer to number [8433333333](phone_number) at [tcb](bank) and add the message [(some thing some thing)](message)
+    - Please send [200,000](amount) to [tcb](bank) number [8433333333](phone_number) and include the note [(some thing some thing)](message)
+    - I'd like to initiate a [200,000](amount) transfer to [tcb](bank) number [8433333333](phone_number) with the message [(some thing some thing)](message)
+    - Transfer [200,000](amount) to [tcb](bank) number [8433333333](phone_number) and attach the message [(some thing some thing)](message) please.
+    - I want to request a [200,000](amount) transfer to [tcb](bank) number [8433333333](phone_number) with the message [(some thing some thing)](message) included.
+    - Please transfer [200,000](amount) to number [8433333333](phone_number).
+    - I'd like to send [200,000](amount) to number [8433333333](phone_number).
+    - Can you help me transfer [200,000](amount) to number [8433333333](phone_number)?
+    - I want to move [200.000](amount) to number [8433333333](phone_number).
+    - Kindly transfer [200.000](amount) to number [8433333333](phone_number).
+    - Initiate a [200.000](amount) transfer to number [8433333333](phone_number).
+    - Please process a [200.000](amount) transaction to number [8433333333](phone_number).
+    - I'd appreciate it if you could transfer [200.000](amount) to number [8433333333](phone_number).
+    - I want to make a [200.000](amount) transfer to number [8433333333](phone_number).
+    - Can you arrange a [200.000](amount) transfer to number [8433333333](phone_number)?
+    - I'd like to request a [200.000](amount) transfer to number [8433333333](phone_number).
+    - Please send [200.000](amount) to number [8433333333](phone_number).
+    - I'd like to initiate a [200.000](amount) transfer to number [8433333333](phone_number).
+    - Transfer [200.000](amount) to number [8433333333](phone_number), please.
+    - I want to request a [20.000](amount) transfer to number [8433333333](phone_number).
+- intent: transfer_general
+  examples: |
+    - Please transfer [200.000](amount) to [John](user)'s account at [tcb](bank) with the message [(some thing some thing)](message)
+    - I'd like to send [1000000](amount) to [John](user)'s [tcb](bank) account and include the message [(some thing some thing)](message)
+    - Can you help me transfer [200.000](amount) to [John](user)'s account at [tcb](bank) with the message [(some thing some thing)](message)?
+    - I want to move [200.000](amount) to [John](user)'s [tcb](bank) account and attach the message [(some thing some thing)](message)
+    - Kindly transfer [200.000](amount) to [John](user)'s account at [tcb](bank) and include the message [(some thing some thing)](message)
+    - Initiate a [200.000](amount) transfer to [John](user)'s [tcb](bank) account and add the message [(some thing some thing)](message)
+    - Please process a [200.000](amount) transaction to [John](user)'s [tcb](bank) account with the note [(some thing some thing)](message)
+    - I'd appreciate it if you could transfer [200.000](amount) to [John](user)'s [tcb](bank) account along with the message [(some thing some thing)](message)
+    - I want to make a [200.000](amount) transfer to [John](user)'s [tcb](bank) account and include the message [(some thing some thing)](message)
+    - Can you arrange a [200.000](amount) transfer to [John](user)'s [tcb](bank) account with the message [(some thing some thing)](message)?
+    - I'd like to request a [200.000](amount) transfer to [John](user)'s account at [tcb](bank) and add the message [(some thing some thing)](message)
+    - Please send [200.000](amount) to [John](user)'s [tcb](bank) account and include the note [(some thing some thing)](message)
+    - I'd like to initiate a [200.000](amount) transfer to [John](user)'s [tcb](bank) account with the message [(some thing some thing)](message)
+    - Transfer [200.000](amount) to [John](user)'s [tcb](bank) account and attach the message [(some thing some thing)](message) please.
+    - I want to request a [200.000](amount) transfer to [John](user)'s [tcb](bank) account with the message [(some thing some thing)](message) included.
+
+- intent: request_money
+  examples: |
+    - Can you please transfer [200.000](amount) for me?
+    - I'd like to request a transfer of [200.000](amount).
+    - Please help me send [200.000](amount) through a bank transfer.
+    - I need to transfer [200.000](amount); can you help me with that?
+    - Kindly assist me in moving [200.000](amount) to another account.
+    - Can you arrange a transfer of [200.000](amount) for me?
+    - I'd like to request that you transfer [200.000](amount).
+    - Please initiate a transfer of [200.000](amount) for me.
+    - Can you help me transfer [200.000](amount)?
+    - I need to send [200.000](amount); please assist me with the transfer.
+
+- intent: give_account
+  examples: |
+    - My [techcombank](bank) account number is [1234567890](account_number).
+    - Please note that my [techcombank](bank) account number is [1234567890](account_number).
+    - For your reference, my [techcombank](bank) account number is [1234567890](account_number).
+    - Just to let you know, my account number with [techcombank](bank) is [1234567890](account_number).
+    - In case you need it, my [techcombank](bank) account number is [1234567890](account_number).
+    - I'd like to provide you with my [viettel](bank) account number: [1234567890](account_number).
+    - Kindly take note of my [techcombank](bank) account number: [1234567890](account_number).
+    - For any transactions with [techcombank](bank), please use my account number [1234567890](account_number).
+    - You can find my [techcombank](bank) account number here: [1234567890](account_number).
+    - If you need my [techcombank](bank) account number, it's [1234567890](account_number).
+    - My account number at [techcombank](bank) is [1234567890](account_number).
+    - For banking purposes, my [techcombank](bank) account number is [1234567890](account_number).
+    - If you're looking for my [scb](bank) account number, it's [1234567890](account_number).
+    - My account number with [scb](bank) is [1234567890](account_number), in case you need it.
+    - Please use this [scb](bank) account number for any transactions: [1234567890](account_number).
+    - To transfer money to my [scb](bank) account, please use the number [1234567890](account_number).
+    - I have a [scb](bank) account with the number [1234567890](account_number).
+    - If you require my [scb](bank) account number, it is [1234567890](account_number).
+    - For your records, my [scb](bank) account number is [1234567890](account_number).
+    - Should you need my [scb](bank) account details, the number is [1234567890](account_number).
+  
+- intent: give_card
+  examples: |
+    - My [sacombank](bank) card number is [0000000000000000](card_number).
+    - Please note that my [sacombank](bank) card number is [1234567890](card_number).
+    - For your reference, my [sacombank](bank) card number is [1234567890](card_number).
+    - Just to let you know, my card number with [sacombank](bank) is [1234567890](card_number).
+    - In case you need it, my [sacombank](bank) card number is [1234567890](card_number).
+    - I'd like to provide you with my [sacombank](bank) card number: [1234567890](card_number).
+    - Kindly take note of my [sacombank](bank) card number: [1234567890](card_number).
+    - For any transactions with [sacombank](bank), please use my card number [1234567890](card_number).
+    - You can find my [sacombank](bank) card number here: [1234567890](card_number).
+    - If you need my [sacombank](bank) card number, it's [1234567890](card_number).
+    - My card number at [sacombank](bank) is [1234567890](card_number).
+    - For banking purposes, my [sacombank](bank) card number is [1234567890](card_number).
+    - If you're looking for my [sacombank](bank) card number, it's [1234567890](card_number).
+    - My card number with [sacombank](bank) is [1234567890](card_number), in case you need it.
+    - Please use this [sacombank](bank) card number for any transactions: [1234567890](card_number).
+    - To transfer money to my [viettel](bank) card, please use the number [1234567890](card_number).
+    - I have a [viettel](bank) card with the number [1234567890](card_number).
+    - If you require my [viettel](bank) card number, it is [1234567890](card_number).
+    - For your records, my [tcb](bank) card number is [1234567890](card_number).
+    - Should you need my [tcb](bank) card details, the number is [1234567890](card_number).
+
+- intent: give_phone
+  examples: |
+    - My [tcb](bank) number is [8433333333](phone_number).
+    - Please note my [tcb](bank) number: [8433333333](phone_number).
+    - For reference, my [tcb](bank) number is [8433333333](phone_number).
+    - Just so you know, my [tcb](bank) number is [8433333333](phone_number).
+    - If needed, my [tcb](bank) number is [8433333333](phone_number).
+    - Kindly use my [tcb](bank) number: [8433333333](phone_number).
+    - My [tcb](bank) account uses the number [8433333333](phone_number).
+    - My phone number is [8433333333](phone_number).
+    - Please note my contact number: [8433333333](phone_number).
+    - For reference, my phone number is [8433333333](phone_number).
+    - Just so you know, my contact number is [8433333333](phone_number).
+    - If needed, my phone number is [8433333333](phone_number).
+    - Kindly use my contact number: [8433333333](phone_number).
+    - My preferred phone number is [8433333333](phone_number).
+
+
+- lookup: user
+  examples: |
+    - John
+    - Marry
+
+- regex: message
+  examples: |
+    - ^\([_A-z0-9]*((-|\s)*[_A-z0-9])*\)$
+- regex: amount
+  examples: |
+    - \d{1,3}(.|,| )?(\d{3})?(.|,| )?(\d{3})?
+
+
+
+- regex: account_number
+  examples: |
+    - \d{8,15}
+  
+- regex: card_number
+  examples: |
+    - 9704\s?-?\s?\d{4}\s?-?\s?\d{4}\s?-?\s?\d{4}
+
+
+- regex: phone_number
+  examples: |
+    - (84|0[3|5|7|8|9])+([0-9]{8})\b
+
+- lookup: bank
+  examples: |
+    - techcombank
+    - tcb
+    - sacombank
+    - scb
+    - viettel
+    - vt
+
+- synonym: viettel
+  examples: |
+    - vt
+    - viettel
+
+- synonym: techcombank
+  examples: |
+    - tcb
+    - techcombank
